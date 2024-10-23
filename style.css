@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(60, 107, 163, 1) 100%
+  );
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "container__score   container__mainGame  container__buttons";
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+.container__score {
+  grid-area: container__score;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.container__mainGame {
+  grid-area: container__mainGame;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .container__mainGame__deck {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.container__buttons {
+  grid-area: container__buttons;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    padding: 2rem;
+    margin: 2rem;
+    font-weight: bold;
+    background-color: white;
+  }
+}
